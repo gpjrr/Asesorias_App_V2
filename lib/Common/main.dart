@@ -7,9 +7,9 @@ void main() => runApp( MaterialApp(
 
     initialRoute: '/',
     routes:{
-        '/' : (context) => Loading(),
-        '/Login' : (context) => Login(),
-        '/NewAccount':(context) => NewAccount(),
+        '/' : (context) => const Loading(),
+        '/Login' : (context) => const Login(),
+        '/NewAccount':(context) => const NewAccount(),
       //visorunicipio
     }
 ));

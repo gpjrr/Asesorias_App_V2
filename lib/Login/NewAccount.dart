@@ -1,4 +1,4 @@
-import 'package:asesorias_app_v2/ThemeHelper.dart';
+import 'package:asesorias_app_v2/Common/ThemeHelper.dart';
 import 'package:flutter/material.dart';
 
 class NewAccount extends StatefulWidget {
@@ -13,7 +13,7 @@ class _NewAccountState extends State<NewAccount> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ThemeHelper().ColorAzul(),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
 
         child: Column(
           children: [],

@@ -8,10 +8,10 @@ class ThemeHelper{
       hintText: hintText,
       fillColor: Colors.white,
       filled: true,
-      contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+      contentPadding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
       focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(100.0),
-          borderSide: BorderSide(color: Colors.grey)
+          borderSide: const BorderSide(color: Colors.grey)
       ),
       enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(100.0),
@@ -19,11 +19,11 @@ class ThemeHelper{
       ),
       errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(100.0),
-          borderSide: BorderSide(color: Colors.red, width: 2.0)
+          borderSide: const BorderSide(color: Colors.red, width: 2.0)
       ),
       focusedErrorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(100.0),
-          borderSide: BorderSide(color: Colors.red, width: 2.0)
+          borderSide: const BorderSide(color: Colors.red, width: 2.0)
       ),
     );
   }
@@ -39,7 +39,7 @@ class ThemeHelper{
 
   BoxDecoration buttonBoxDecoration(BuildContext context, [String color1 = "", String color2 = ""]) {
     Color c1 = Theme.of(context).primaryColor;
-    Color c2 = Theme.of(context).accentColor;
+    Color c2 = Theme.of(context).cardColor; //TODO:  CHECK COLOR
     if (color1.isEmpty == false) {
       c1 = HexColor(color1);
     }
@@ -48,16 +48,17 @@ class ThemeHelper{
     }
 
     return BoxDecoration(
-      boxShadow: [
+      boxShadow: const [
         BoxShadow(color: Colors.black26, offset: Offset(0, 4), blurRadius: 5.0)
       ],
       gradient: LinearGradient(
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
-        stops: [0.0, 1.0],
+        stops: const [0.0, 1.0],
         colors: [
           c1,
           c2,
+          
         ],
       ),
       color: Colors.deepPurple.shade300,
@@ -69,13 +70,13 @@ class ThemeHelper{
       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder( borderRadius: BorderRadius.circular(30.0),),
       ),
-      minimumSize: MaterialStateProperty.all(Size(50, 50)),
+      minimumSize: MaterialStateProperty.all(const Size(50, 50)),
       backgroundColor: MaterialStateProperty.all(Colors.transparent),
       shadowColor: MaterialStateProperty.all(Colors.transparent),
     );
   }
 
   Color ColorAzul(){
-    return Color.fromRGBO(0, 55, 92,1);
+    return const Color.fromRGBO(0, 55, 92,1);
   }
 }
