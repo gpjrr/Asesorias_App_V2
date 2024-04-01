@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
+import 'Constants.dart';
+
 class ThemeHelper{
   InputDecoration textInputDecoration([String lableText="", String hintText = ""]){
     return InputDecoration(
@@ -38,8 +40,8 @@ class ThemeHelper{
   }
 
   BoxDecoration buttonBoxDecoration(BuildContext context, [String color1 = "", String color2 = ""]) {
-    Color c1 = Theme.of(context).primaryColor;
-    Color c2 = Theme.of(context).cardColor; //TODO:  CHECK COLOR
+    Color c1 = Constants.azulObscuro;
+    Color c2 = Constants.azulClaro; //TODO:  CHECK COLOR
     if (color1.isEmpty == false) {
       c1 = HexColor(color1);
     }
@@ -61,7 +63,7 @@ class ThemeHelper{
           
         ],
       ),
-      color: Colors.deepPurple.shade300,
+      color: Constants.azulObscuro,
       borderRadius: BorderRadius.circular(30),
     );
   }
@@ -74,9 +76,5 @@ class ThemeHelper{
       backgroundColor: MaterialStateProperty.all(Colors.transparent),
       shadowColor: MaterialStateProperty.all(Colors.transparent),
     );
-  }
-
-  Color ColorAzul(){
-    return const Color.fromRGBO(0, 55, 92,1);
   }
 }
