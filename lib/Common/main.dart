@@ -17,8 +17,8 @@ void main() => runApp( MaterialApp(
     },
     theme:  ThemeData(
       colorScheme:  ColorScheme(
-    primary: Constants.azulClaro,
-    secondary: Constants.azulObscuro,
+    primary: Constants.azulObscuro,
+    secondary:Constants.azulClaro ,
     
     surface: Constants.blanco,
     background: Constants.blanco,

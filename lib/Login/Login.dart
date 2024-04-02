@@ -1,4 +1,3 @@
-import 'dart:html';
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -95,10 +94,11 @@ class _LoginState extends State<Login> {
                               ),
                               const SizedBox(height: 30.0),
                               Container(
-                                decoration: ThemeHelper().buttonBoxDecoration(context),
+                                //decoration: ThemeHelper().buttonBoxDecoration(context),
                                 child: ElevatedButton(
-                                  onPressed: () { 
+                                  onPressed: () async { 
                                       //    TODO: PATH TO login in students or teachers
+                                      await Navigator.pushNamed(context,'/ProfesorHome');
                                    },
                                   child: Text("Iniciar Sesion"),
                                   

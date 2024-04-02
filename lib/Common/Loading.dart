@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:asesorias_app_v2/Common/ThemeHelper.dart';
 import 'Constants.dart';
 //import 'package:fl'
 class Loading extends StatefulWidget {
@@ -14,6 +13,7 @@ class Loading extends StatefulWidget {
 class _LoadingState extends State<Loading> {
   void TiempoEsperando()  async{
     await Future.delayed(const Duration(seconds: 5));
+    
     Navigator.pushReplacementNamed(context, '/Login' );
   }
 
