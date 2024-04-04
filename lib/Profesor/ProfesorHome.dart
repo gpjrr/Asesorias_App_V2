@@ -10,13 +10,13 @@ class ProfesorHome extends StatefulWidget {
 }
 
 class _ProfesorHomeState extends State<ProfesorHome> {  
-  // list of icons that required 
+  // list of icons that requiredF 
   // by animated navigation bar 
   List<IconData> iconList = [ 
-      Icons.home_work_outlined,
-      Icons.account_box_outlined,
       Icons.list_alt_outlined,
-      Icons.mail_outline
+      Icons.mail_outline,
+      Icons.account_box_outlined,
+      Icons.home_work_outlined
     ];
   int _bottomNavIndex=0;
   @override
@@ -30,7 +30,19 @@ class _ProfesorHomeState extends State<ProfesorHome> {
       builder: (context) {
         
         return Scaffold(
-          body: Container(), //destination screen
+          body: Container(
+            child: (){
+              if(_bottomNavIndex==0)
+                return Text('Hello World',style: Theme.of(context).textTheme.headlineMedium!.copyWith(color: Colors.black),);
+              else
+              if(_bottomNavIndex==1)
+              else
+              if(_bottomNavIndex==2)
+                return Text('Goodbye World',style: Theme.of(context).textTheme.headlineMedium!.copyWith(color: Colors.black));
+              else
+              if(_bottomNavIndex==3)
+            }(),
+          ), //destination screen
           floatingActionButton: FloatingActionButton(
             onPressed: () {  },
             child: Icon( Icons.note_add_outlined ),
