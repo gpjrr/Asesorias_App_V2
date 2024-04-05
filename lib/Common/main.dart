@@ -4,7 +4,7 @@ import 'package:asesorias_app_v2/Profesor/ProfesorHome.dart';
 import 'package:flutter/material.dart';
 import 'package:asesorias_app_v2/Login/Login.dart';
 import 'Loading.dart';
-final Color primaryColor = Constants.azulClaro;
+const Color primaryColor = Constants.azulClaro;
 void main() => runApp( MaterialApp(
     //TODO: always add the new page
     initialRoute: '/',
@@ -16,7 +16,7 @@ void main() => runApp( MaterialApp(
       //visorunicipio
     },
     theme:  ThemeData(
-      colorScheme:  ColorScheme(
+      colorScheme:  const ColorScheme(
     primary: Constants.azulObscuro,
     secondary:Constants.azulClaro ,
     

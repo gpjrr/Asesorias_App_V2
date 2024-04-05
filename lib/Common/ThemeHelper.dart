@@ -42,11 +42,13 @@ class ThemeHelper{
   BoxDecoration buttonBoxDecoration(BuildContext context, [String color1 = "", String color2 = ""]) {
     Color c2 = Constants.azulObscuro;
     Color c1 = Constants.azulClaro; //TODO:  CHECK COLOR
-    if (color1.isEmpty == false) 
+    if (color1.isEmpty == false) {
       c1 = HexColor(color1);
+    }
     
-    if (color2.isEmpty == false) 
+    if (color2.isEmpty == false) {
       c2 = HexColor(color2);
+    }
     
 
     return BoxDecoration(

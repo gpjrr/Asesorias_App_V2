@@ -1,7 +1,5 @@
-import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 
 class Constants{
   static const Color azulClaro = Color.fromRGBO(37, 150, 190,1);

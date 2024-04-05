@@ -101,7 +101,7 @@ class _LoginState extends State<Login> {
                                       await Navigator.pushNamed(context,'/ProfesorHome');
                                    },
                                   
-                                  child: Text("Iniciar Sesion"),
+                                  child: const Text("Iniciar Sesion"),
                                   
                                 ),
                               ),
