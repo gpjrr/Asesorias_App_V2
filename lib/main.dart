@@ -1,10 +1,14 @@
 import 'package:asesorias_app_v2/Login/NewAccount.dart';
 import 'package:asesorias_app_v2/Common/Constants.dart';
 import 'package:asesorias_app_v2/Profesor/ProfesorHome.dart';
+import  'package:asesorias_app_v2/Common/Constants.dart';
+///todo: check lopading
+import 'lo'
+import  'package:asesorias_app_v2/Common/ThemeHelper.dart';
 import 'package:flutter/material.dart';
 import 'package:asesorias_app_v2/Login/Login.dart';
-import 'Loading.dart';
-const Color primaryColor = Constants.azulClaro;
+import 'Common/Loading.dart';
+const Color primaryColor = Color.fromARGB(255, 13, 170, 228);
 void main() => runApp( MaterialApp(
     //TODO: always add the new page
     initialRoute: '/',
