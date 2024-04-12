@@ -1,4 +1,5 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+import 'package:asesorias_app_v2/Profesor/EmailList.dart';
 import 'package:asesorias_app_v2/Profesor/PlacesList.dart';
 import 'package:flutter/material.dart';
 
@@ -32,11 +33,11 @@ class _ProfesorHomeState extends State<ProfesorHome> {
         return Scaffold(
           body: Container(
             child: (){
-              if(_bottomNavIndex==0) {
+              if(_bottomNavIndex==0) 
                 return const PlacesList();
-              } else
+              else
               if(_bottomNavIndex==1)
-                return Text('Component',style: Theme.of(context).textTheme.headlineMedium!.copyWith(color: Colors.black));
+                return const EmailList();
               else
               if(_bottomNavIndex==2)
                 return Text('Goodbye World',style: Theme.of(context).textTheme.headlineMedium!.copyWith(color: Colors.black));

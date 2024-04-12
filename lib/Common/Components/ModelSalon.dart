@@ -24,7 +24,7 @@ class  ModelSalon  extends Card  {
       child: ListTile(
         leading: Text("ID:$id"),
         title: Text(nombre),
-        subtitle: Text("Edificio:$edificio/n floor:$piso Salon:$salon"),
+        subtitle: Text("Edificio:$edificio Piso:$piso Salon:$salon"),
       ),
     );
     
