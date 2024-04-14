@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../Constants.dart';
 
 class ModelEmail extends Card{
-   ModelEmail( this.materia,this.alumno,this.matricula );
+   const ModelEmail( this.materia,this.alumno,this.matricula, {super.key} );
     final String materia;
     final String alumno;
     final int matricula;
@@ -23,7 +23,7 @@ class ModelEmail extends Card{
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
            ListTile(
-            title: Text("$materia",style: TextStyle(fontSize: 20)),
+            title: Text(materia,style: const TextStyle(fontSize: 20)),
             subtitle: Text("$alumno  $matricula"),
           ),
           Row(

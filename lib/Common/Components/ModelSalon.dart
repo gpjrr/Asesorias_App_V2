@@ -3,13 +3,15 @@ import 'package:asesorias_app_v2/Common/Constants.dart';
 import 'package:flutter/material.dart';
 
 class  ModelSalon  extends Card  {
-  const ModelSalon( this.nombre, this.edificio, this.piso, this.salon,this.id, {super.key});  
+  
+
+  const ModelSalon( this.nombre, this.edificio, this.piso, this.salon,this.id,{super.key});  
   final String nombre;
   final String edificio;
   final int piso;
   final String salon;
   final int id;
-
+  
   @override
   Widget  build(BuildContext context) {
     return Card(

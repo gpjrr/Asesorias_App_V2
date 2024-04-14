@@ -1,5 +1,4 @@
 import 'package:asesorias_app_v2/Common/Components/TextBar.dart';
-import 'package:flutter/src/material/card.dart';
 import 'package:asesorias_app_v2/Common/Constants.dart';
 import 'package:flutter/material.dart';
 import '../Common/Components/ModelSalon.dart';
@@ -20,9 +19,9 @@ class _PlacesListState extends State<PlacesList> {
     int  size=0;
     super.initState();
     /// nombre, edificio, piso, salon;
-    Cards.add( ModelSalon( "Salon","Ema 5",0,"3D",1 )   );
-    Cards.add( ModelSalon( "cubiculo","CC03",0,"135",2 )  );
-    Cards.add( ModelSalon( "Salon Matematicas","CC02",1,"110",3 ) );
+    Cards.add( const ModelSalon( "Salon","Ema 5",0,"3D",1)   );
+    Cards.add( const ModelSalon( "cubiculo","CC03",0,"135",2)  );
+    Cards.add( const ModelSalon( "Salon Matematicas","CC02",1,"110",3) );
     
   }
   @override
@@ -30,7 +29,7 @@ class _PlacesListState extends State<PlacesList> {
     return Scaffold( 
       appBar: AppBar(
         /// TODO: insert button to create a new place 
-        title: TextBar("Area de Trabajo"),
+        title: const TextBar("Area de Trabajo"),
         backgroundColor: Constants.azulClaro,
       ),
       body: Center(

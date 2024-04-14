@@ -34,16 +34,16 @@ class _ProfesorHomeState extends State<ProfesorHome> {
         return Scaffold(
           body: Container(
             child: (){
-              if(_bottomNavIndex==0) 
+              if(_bottomNavIndex==0) {
                 return const ClassList();
-              else
+              } else
               if(_bottomNavIndex==1)
                 return const EmailList();
               else
               if(_bottomNavIndex==2)
                 return Text('Goodbye World',style: Theme.of(context).textTheme.headlineMedium!.copyWith(color: Colors.black));
               else
-                return const PlacesList();
+                return const PlacesList();             
 
             }(),
           ), //destination screen
