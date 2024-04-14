@@ -1,4 +1,5 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+import 'package:asesorias_app_v2/Profesor/ClassList.dart';
 import 'package:asesorias_app_v2/Profesor/EmailList.dart';
 import 'package:asesorias_app_v2/Profesor/PlacesList.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +35,7 @@ class _ProfesorHomeState extends State<ProfesorHome> {
           body: Container(
             child: (){
               if(_bottomNavIndex==0) 
-                return const PlacesList();
+                return const ClassList();
               else
               if(_bottomNavIndex==1)
                 return const EmailList();
@@ -42,8 +43,8 @@ class _ProfesorHomeState extends State<ProfesorHome> {
               if(_bottomNavIndex==2)
                 return Text('Goodbye World',style: Theme.of(context).textTheme.headlineMedium!.copyWith(color: Colors.black));
               else
-                return Text('Bye',style: Theme.of(context).textTheme.headlineMedium!.copyWith(color: Colors.black));
-              
+                return const PlacesList();
+
             }(),
           ), //destination screen
           floatingActionButton: FloatingActionButton(
