@@ -30,7 +30,7 @@ class ModelAsesorias extends Card{
   }
   BuildTime() {
     DateTime date = DateTime.parse(time);
-    return Row(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Text(DateFormat('EEEE').format(date)),
