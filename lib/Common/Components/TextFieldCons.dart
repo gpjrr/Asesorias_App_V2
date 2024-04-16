@@ -7,9 +7,9 @@ class TextFieldCons extends StatefulWidget {
   final TextInputType type;
   final bool read;
 
-  const TextFieldCons({ 
+  const TextFieldCons({
     Key? key,
-    required this.start,
+    this.start = "",
     required this.control,
     required this.hint,
     this.type = TextInputType.text,
@@ -24,23 +24,31 @@ class _TextFieldConsState extends State<TextFieldCons> {
   @override
   void initState() {
     // TODO: implement initState
-
-      
-    widget.control.text= widget.start;
+    widget.control.text = widget.start;
     super.initState();
-  }  
+  }
+
+  String? Validaciones(String value) {
+    if (value.isEmpty) {
+      return 'Please enter your email.';
+    }
+    if (!value.contains('@')) {
+      return 'Please enter a valid email address.';
+    }
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      
+    return TextFormField(
       controller: widget.control,
-      decoration: InputDecoration(
-        hintText: widget.hint,
-        labelText: widget.hint
-      ),
+      decoration:
+          InputDecoration(hintText: widget.hint, labelText: widget.hint),
       keyboardType: widget.type,
-      readOnly:  widget.read, 
+      readOnly: widget.read,
+
+      ///TODO:Add Validaciones
+      //validator:
     );
   }
 }
- 
