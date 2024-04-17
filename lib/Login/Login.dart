@@ -71,29 +71,13 @@ class _LoginState extends State<Login> {
                       key: FormKey,
                       child: Column(
                         children: [
-                          Container(
-                            margin: const EdgeInsets.fromLTRB(10, 0, 10, 20),
-                            //alignment: Alignment.topRight,
-                            child: GestureDetector(
-                              onTap: () async {
-                                await Navigator.pushNamed(
-                                    context, '/NewAccount');
-                              },
-                              child: const Text(
-                                "Crear Cuenta",
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                ),
-                              ),
-                            ),
-                          ),
                           const SizedBox(height: 15.0),
                           Container(
                             decoration:
                                 ThemeHelper().inputBoxDecorationShaddow(),
                             child: TextField(
                               decoration: ThemeHelper().textInputDecoration(
-                                  'Nombre de usuario', 'Inserta tu nombre'),
+                                  'Matricula', 'Inserta tu matricula'),
                             ),
                           ),
                           const SizedBox(height: 30.0),
@@ -103,7 +87,7 @@ class _LoginState extends State<Login> {
                             child: TextField(
                               obscureText: true,
                               decoration: ThemeHelper().textInputDecoration(
-                                  'Password', 'Inserta tu contraseña'),
+                                  'Contraseña', 'Inserta tu contraseña'),
                             ),
                           ),
                           const SizedBox(height: 30.0),

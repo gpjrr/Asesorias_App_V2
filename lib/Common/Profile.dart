@@ -44,7 +44,10 @@ class _ProfileState extends State<Profile> {
                   child: const Text('PR'),
                 ),
                 TextFieldCons(
-                    start: "Erwin", control: name, hint: "Nombre", read: true),
+                    start: "Erwin",
+                    control: name,
+                    hint: "Nombre",
+                    read: true),
                 TextFieldCons(
                     start: "Romero Ramos",
                     control: apellidos,

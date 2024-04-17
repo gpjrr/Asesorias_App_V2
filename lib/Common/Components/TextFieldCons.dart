@@ -46,8 +46,7 @@ class _TextFieldConsState extends State<TextFieldCons> {
           InputDecoration(hintText: widget.hint, labelText: widget.hint),
       keyboardType: widget.type,
       readOnly: widget.read,
-
-      ///TODO:Add Validaciones
+      //TODO:Add Validaciones
       //validator:
     );
   }

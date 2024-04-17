@@ -32,19 +32,22 @@ class _NewAccount extends State<NewAccount> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 TextFieldCons(control: name, hint: "Nombre"),
-                TextFieldCons(
-                    control: apellidos, hint: "Apellidos", read: true),
-                TextFieldCons(
-                    control: edad,
-                    hint: "Edad",
-                    read: true,
-                    type: TextInputType.number),
-                TextFieldCons(
-                    control: tipousuario, hint: "Tipo de cuenta", read: true),
-                TextFieldCons(
-                    control: matricula, hint: "Matricula", read: true),
-                TextFieldCons(
-                    control: correo, hint: "Correo Electronico", read: true),
+                TextFieldCons(control: apellidos, hint: "Apellidos",),
+                TextFieldCons(control: edad, hint: "Edad",type: TextInputType.number),
+                //TextFieldCons(control: tipousuario, hint: "Tipo de cuenta", read: true),
+                //Todo:Add  Option List
+                TextFieldCons(control: matricula, hint: "Matricula", type: TextInputType.number),
+                TextFieldCons(control: correo, hint: "Correo Electronico"),
+                const SizedBox(height: 10.0),
+                TextButton(
+                  style: ButtonStyle(
+                    foregroundColor: MaterialStateProperty.all<Color>(Colors.white), // Text color
+                    backgroundColor: MaterialStateProperty.all<Color>(Constants.azulObscuro), // Button background color
+                  ),
+                  onPressed: () { Navigator.pushNamed(context, '/ProfesorHome');},
+                  child: Text('Guardar Datos'),
+                ), 
+                const SizedBox(height: 30.0),
               ]),
         ));
   }
