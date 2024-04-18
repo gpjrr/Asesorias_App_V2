@@ -42,7 +42,7 @@ class _ProfesorHomeState extends State<ProfesorHome> {
                 return const EmailList();
               else
               if(_bottomNavIndex==2)
-                return const Profile();
+                return const Profile(0);
               else
                 return const PlacesList();             
 

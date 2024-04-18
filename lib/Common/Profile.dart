@@ -6,8 +6,8 @@ import 'Components/TextBar.dart';
 import 'Constants.dart';
 
 class Profile extends StatefulWidget {
-  const Profile({super.key});
-
+  const Profile(this.user, {super.key});
+  final user;
   @override
   State<Profile> createState() => _ProfileState();
 }
@@ -19,10 +19,16 @@ class _ProfileState extends State<Profile> {
   TextEditingController tipousuario = new TextEditingController();
   TextEditingController matricula = new TextEditingController();
   TextEditingController correo = new TextEditingController();
-
+  var list;
   @override
   void initState() {
     // TODO: implement initState
+    if( widget.user ==0 )
+      list=["Erwin","Romero Ramos","35","profesor","201831425","erwin20rr@hotmail.com"];
+    else
+      list=["Roberto","Gomez Benitez","19","Alumno","201523564","juanitoprz@hotmail.com"];
+
+    
     super.initState();
   }
 
@@ -44,33 +50,33 @@ class _ProfileState extends State<Profile> {
                   child: const Text('PR'),
                 ),
                 TextFieldCons(
-                    start: "Erwin",
+                    start: list[0].toString(),
                     control: name,
                     hint: "Nombre",
                     read: true),
                 TextFieldCons(
-                    start: "Romero Ramos",
+                    start: list[1].toString(),
                     control: apellidos,
                     hint: "Apellidos",
                     read: true),
                 TextFieldCons(
-                    start: "15",
+                    start: list[2].toString(),
                     control: edad,
                     hint: "Edad",
                     read: true,
                     type: TextInputType.number),
                 TextFieldCons(
-                    start: "profesor",
+                    start: list[3].toString(),
                     control: tipousuario,
                     hint: "Tipo de cuenta",
                     read: true),
                 TextFieldCons(
-                    start: "201831425",
+                    start: list[4].toString(),
                     control: matricula,
                     hint: "Matricula",
                     read: true),
                 TextFieldCons(
-                    start: "erwin20rr@hotmail.com",
+                    start: list[5].toString(),
                     control: correo,
                     hint: "Correo Electronico",
                     read: true),
