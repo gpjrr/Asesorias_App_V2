@@ -10,6 +10,19 @@ class NextClass extends StatefulWidget {
 class _NextClassState extends State<NextClass> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+        appBar: AppBar(
+
+            /// TODO: insert button to create a new place
+            //title: const TextBar("Asesorias Pendientes"),
+            //backgroundColor: Constants.azulClaro,
+            ),
+        body: Center(
+            child: ListView.builder(
+          itemCount: 3,
+          itemBuilder: (context, index) {
+            return Cards[index];
+          },
+        )));
   }
 }

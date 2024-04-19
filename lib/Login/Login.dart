@@ -16,6 +16,7 @@ class _LoginState extends State<Login> {
   double HeaderAlt = 220;
   double Logsize = 80;
   Key FormKey = GlobalKey<FormState>();
+  int profile = 0;
 
   ///Fnciones
   @override
@@ -114,8 +115,12 @@ class _LoginState extends State<Login> {
                               onPressed: () async {
                                 //    TODO: PATH TO login in students or teachers
                                 Navigator.pop(context);
-                                await Navigator.pushNamed(
-                                    context, '/ProfesorHome');
+                                if (profile == 0)
+                                  await Navigator.pushNamed(
+                                      context, '/ProfesorHome');
+                                else
+                                  await Navigator.pushNamed(
+                                      context, '/StudentHome');
                               },
                               child: const Text("Iniciar Sesion"),
                             ),
