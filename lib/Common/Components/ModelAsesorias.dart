@@ -10,6 +10,7 @@ class ModelAsesorias extends Card{
   final int capacidad;
    final String lugar;
   @override
+  
   Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(
