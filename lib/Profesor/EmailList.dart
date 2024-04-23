@@ -12,33 +12,40 @@ class EmailList extends StatefulWidget {
 }
 
 class _EmailListState extends State<EmailList> {
-  List<Card> Cards= [];
+  List<Card> Cards = [];
   @override
   void initState() {
-    Cards.add( const ModelEmail( "Algebra","Erwin Romero Ramos",201762426 )   );
-    Cards.add( const ModelEmail( "Matematicas Aplicadas","Judith Gonzalez",201831425)   );
-    Cards.add( const ModelEmail( "Algebra","Erwin Romero Ramos",201635468 )   );
+    Cards.add(const ModelEmail("Algebra", "Erwin Romero Ramos", 201762426));
+    Cards.add(const ModelEmail(
+        "Matematicas Aplicadas", "Judith Gonzalez", 201831425));
+    Cards.add(const ModelEmail("Algebra", "Erwin Romero Ramos", 201635468));
   }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold( 
-      appBar: AppBar(
-        /// TODO: insert button to create a new place 
-        title: const TextBar("Lista de solicitudes"),
-        backgroundColor: Constants.azulClaro,
-      ),
-      body: Center(
-        child: ListView.builder(
+    return Scaffold(
+        appBar: AppBar(
+          /// TODO: insert button to create a new place
+          title: TextBar("Lista de solicitudes"),
+          backgroundColor: Constants.azulClaro,
+          actions: <Widget>[
+            IconButton(
+              icon: const Icon(Icons.close_sharp),
+              tooltip: 'Cerrar Cuenta.',
+              onPressed: () {
+                // handle the press
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/Login');
+              },
+            ),
+          ],
+        ),
+        body: Center(
+            child: ListView.builder(
           itemCount: 3,
           itemBuilder: (context, index) {
-            return Cards[index];  
+            return Cards[index];
           },
-        )
-      )
-    
-    );
-
-
-    
+        )));
   }
 }
