@@ -36,8 +36,7 @@ class _NewAccount extends State<NewAccount> {
                   control: apellidos,
                   hint: "Apellidos",
                 ),
-                TextFieldCons(
-                    control: edad, hint: "Edad", type: TextInputType.number),
+                TextFieldCons(control: edad, hint: "Edad", type: TextInputType.number),
                 //TextFieldCons(control: tipousuario, hint: "Tipo de cuenta", read: true),
                 //Todo:Add  Option List
                 TextFieldCons(
