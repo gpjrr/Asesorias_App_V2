@@ -44,18 +44,6 @@ class _ProfesorHomeState extends State<ProfesorHome> {
           }(),
         ), //destination screen
 
-        floatingActionButton: FloatingActionButton(
-          onPressed: () async {
-            if (_bottomNavIndex == 0) {
-              ///Maybe Its So Fucking wrong
-              final rslt = await Navigator.pushNamed(context, '/NewClass');
-              if (rslt != null) setState(() {});
-            }
-          },
-          child: const Icon(Icons.note_add_outlined),
-        ),
-
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: AnimatedBottomNavigationBar(
           icons: iconList,
           activeIndex: _bottomNavIndex,

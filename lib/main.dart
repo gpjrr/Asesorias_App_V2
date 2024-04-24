@@ -1,5 +1,6 @@
 import 'package:asesorias_app_v2/Login/NewAccount.dart';
 import 'package:asesorias_app_v2/Common/Constants.dart';
+import 'package:asesorias_app_v2/Profesor/NewClass.dart';
 import 'package:asesorias_app_v2/Profesor/ProfesorHome.dart';
 import 'package:asesorias_app_v2/Common/Loading.dart';
 
@@ -17,6 +18,7 @@ void main() => runApp(MaterialApp(
         '/NewAccount': (context) => const NewAccount(),
         '/ProfesorHome': (context) => const ProfesorHome(),
         '/NewAccount': (context) => const NewAccount(),
+        '/NewClass': (context) => NewClass(),
         //visorunicipio
       },
       theme: ThemeData(
