@@ -17,9 +17,9 @@ class _ProfesorHomeState extends State<ProfesorHome> {
   // by animated navigation bar
   List<IconData> iconList = [
     Icons.list_alt_outlined,
+    Icons.home_work_outlined,
     Icons.mail_outline,
-    Icons.account_box_outlined,
-    Icons.home_work_outlined
+    Icons.account_box_outlined
   ];
   int _bottomNavIndex = 0;
   @override
@@ -33,17 +33,27 @@ class _ProfesorHomeState extends State<ProfesorHome> {
         body: Container(
           child: () {
             if (_bottomNavIndex == 0)
-              //return Text('Goodbye World',style: Theme.of(context).textTheme.headlineMedium!.copyWith(color: Colors.black));
               return const ClassList();
             else if (_bottomNavIndex == 1)
-              return const EmailList();
-            else if (_bottomNavIndex == 2)
-              return const Profile(0);
-            else
               return const PlacesList();
+            else if (_bottomNavIndex == 2)
+              return const EmailList();
+            else
+              return const Profile(0);
           }(),
         ), //destination screen
-
+        floatingActionButton: FloatingActionButton(
+          onPressed: ()  {
+            //if (_bottomNavIndex == 0) {
+            ///Maybe Its So Fucking wrong
+            //final rslt = 
+             Navigator.pushNamed(context, '/NewClass');
+            //if (rslt != null) setState(() {});
+            //}
+          },
+          child: const Icon(Icons.note_add_outlined),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: AnimatedBottomNavigationBar(
           icons: iconList,
           activeIndex: _bottomNavIndex,
