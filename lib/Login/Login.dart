@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:asesorias_app_v2/Common/ThemeHelper.dart';
+import 'package:asesorias_app_v2/Common/Pages/ThemeHelper.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -16,7 +16,7 @@ class _LoginState extends State<Login> {
   double HeaderAlt = 220;
   double Logsize = 80;
   Key FormKey = GlobalKey<FormState>();
-  int profile = 0;
+  int profile = 1;
 
   ///Fnciones
   @override

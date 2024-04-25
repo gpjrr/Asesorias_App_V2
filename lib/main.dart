@@ -1,12 +1,15 @@
 import 'package:asesorias_app_v2/Login/NewAccount.dart';
-import 'package:asesorias_app_v2/Common/Constants.dart';
+import 'package:asesorias_app_v2/Common/Pages/Constants.dart';
 import 'package:asesorias_app_v2/Profesor/NewClass.dart';
 import 'package:asesorias_app_v2/Profesor/ProfesorHome.dart';
-import 'package:asesorias_app_v2/Common/Loading.dart';
+import 'package:asesorias_app_v2/Common/Pages/Loading.dart';
+import 'package:asesorias_app_v2/Student/StudentHome.dart';
 
 ///todo: check lopading
 import 'package:flutter/material.dart';
 import 'package:asesorias_app_v2/Login/Login.dart';
+
+import 'Student/NewAsesoria.dart';
 
 const Color primaryColor = Color.fromARGB(255, 13, 170, 228);
 void main() => runApp(MaterialApp(
@@ -19,6 +22,8 @@ void main() => runApp(MaterialApp(
         '/ProfesorHome': (context) => const ProfesorHome(),
         '/NewAccount': (context) => const NewAccount(),
         '/NewClass': (context) => NewClass(),
+        '/StudentHome': (context) => const StudentHome(),
+        '/NewAsesoria':(context) => const   NewAsesoria(),
         //visorunicipio
       },
       theme: ThemeData(

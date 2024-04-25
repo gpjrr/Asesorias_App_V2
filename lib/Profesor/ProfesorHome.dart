@@ -1,5 +1,5 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
-import 'package:asesorias_app_v2/Common/Profile.dart';
+import 'package:asesorias_app_v2/Common/Pages/Profile.dart';
 import 'package:asesorias_app_v2/Profesor/ClassList.dart';
 import 'package:asesorias_app_v2/Profesor/EmailList.dart';
 import 'package:asesorias_app_v2/Profesor/PlacesList.dart';

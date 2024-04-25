@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../Constants.dart';
+import '../Pages/Constants.dart';
 
 class ModelEmail extends Card{
    const ModelEmail( this.materia,this.alumno,this.matricula, {super.key} );

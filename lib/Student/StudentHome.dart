@@ -1,7 +1,7 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
-import '../Common/Profile.dart';
+import '../Common/Pages/Profile.dart';
 import 'NextClass.dart';
 
 class StudentHome extends StatefulWidget {
@@ -34,7 +34,9 @@ class _StudentHomeState extends State<StudentHome> {
           }(),
         ), //destination screen
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/NewAsesoria');
+          },
           child: const Icon(Icons.note_add_outlined),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

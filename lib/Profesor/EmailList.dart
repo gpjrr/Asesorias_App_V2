@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../Common/Components/ModelEmail.dart';
 import '../Common/Components/TextBar.dart';
-import '../Common/Constants.dart';
+import '../Common/Pages/Constants.dart';
 
 class EmailList extends StatefulWidget {
   const EmailList({super.key});

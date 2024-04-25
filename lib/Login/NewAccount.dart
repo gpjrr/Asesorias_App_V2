@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../Common/Components/TextBar.dart';
 import '../Common/Components/TextFieldCons.dart';
-import '../Common/Constants.dart';
+import '../Common/Pages/Constants.dart';
 
 class NewAccount extends StatefulWidget {
   const NewAccount({super.key});

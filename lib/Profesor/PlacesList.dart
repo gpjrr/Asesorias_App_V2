@@ -1,5 +1,5 @@
 import 'package:asesorias_app_v2/Common/Components/TextBar.dart';
-import 'package:asesorias_app_v2/Common/Constants.dart';
+import 'package:asesorias_app_v2/Common/Pages/Constants.dart';
 import 'package:flutter/material.dart';
 import '../Common/Components/ModelSalon.dart';
 

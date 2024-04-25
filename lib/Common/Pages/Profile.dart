@@ -2,7 +2,7 @@ import 'package:asesorias_app_v2/Common/Components/TextFieldCons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'Components/TextBar.dart';
+import '../Components/TextBar.dart';
 import 'Constants.dart';
 
 class Profile extends StatefulWidget {
@@ -20,6 +20,7 @@ class _ProfileState extends State<Profile> {
   TextEditingController matricula = new TextEditingController();
   TextEditingController correo = new TextEditingController();
   var list;
+  String avatar="";
   @override
   void initState() {
     // TODO: implement initState
@@ -37,7 +38,7 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
         appBar: AppBar(
           /// TODO: insert button to create a new place
-          title: const TextBar("Perfil"),
+          title: TextBar(list[3]),
           backgroundColor: Constants.azulClaro,
         ),
         body: Container(
@@ -46,8 +47,10 @@ class _ProfileState extends State<Profile> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 CircleAvatar(
+                  minRadius: 75,
+                  maxRadius: 75,
                   backgroundColor: Constants.azulObscuro,
-                  child: const Text('PR'),
+                  child: Text(list[3].toString()),
                 ),
                 TextFieldCons(
                     start: list[0].toString(),

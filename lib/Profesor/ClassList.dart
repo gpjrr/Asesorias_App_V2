@@ -2,7 +2,7 @@ import 'package:asesorias_app_v2/Common/Components/ModelAsesorias.dart';
 import 'package:flutter/material.dart';
 
 import '../Common/Components/TextBar.dart';
-import '../Common/Constants.dart';
+import '../Common/Pages/Constants.dart';
 
 class ClassList extends StatefulWidget {
   const ClassList({super.key});

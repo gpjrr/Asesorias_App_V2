@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../Common/Components/ModelNextClass.dart';
 import '../Common/Components/TextBar.dart';
-import '../Common/Constants.dart';
+import '../Common/Pages/Constants.dart';
 
 class NextClass extends StatefulWidget {
   const NextClass({super.key});
@@ -15,6 +16,8 @@ class _NextClassState extends State<NextClass> {
   @override
   void initState() {
     // TODO: implement initState
+    Cards.add(const ModelNextClass("Algebra","Salon de clases","Ema 5", "0", "3D", '2024-03-25 18:00:00Z') );
+    Cards.add(const ModelNextClass("Programacion","cubiculo", "CC03", "3", "135", '2024-03-26 14:30:00Z') );
     super.initState();
   }
 
@@ -39,7 +42,7 @@ class _NextClassState extends State<NextClass> {
         ),
         body: Center(
             child: ListView.builder(
-          itemCount: 3,
+          itemCount: 2,
           itemBuilder: (context, index) {
             return Cards[index];
           },
