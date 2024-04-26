@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import '../Components/Constants.dart';
+import '../../Common/Components/Constants.dart';
 
 class ModelAsesorias extends Card {
   const ModelAsesorias(

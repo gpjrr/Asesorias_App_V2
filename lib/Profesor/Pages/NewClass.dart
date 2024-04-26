@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import '../Common/Components/TextBar.dart';
-import '../Common/Components/TextFieldCons.dart';
-import '../Common/Pages/Constants.dart';
+import '../../Common/Components/TextBar.dart';
+import '../../Common/Components/TextFieldCons.dart';
+import '../../Common/Pages/Constants.dart';
 
 class NewClass extends StatefulWidget {
   TextEditingController materia = new TextEditingController();

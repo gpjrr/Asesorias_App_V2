@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
-
-import '../Pages/Constants.dart';
 import 'package:intl/intl.dart';
-class ModelAsesorias extends Card{
-  const ModelAsesorias(this.materia,this.totalAlumnos,this.capacidad,this.lugar,this.time, {super.key});
-  final String time;
-  final String materia;
-  final int totalAlumnos;
-  final int capacidad;
-   final String lugar;
+import '../../Common/Pages/Constants.dart';
+
+class ModelNextClass extends Card {
+  const ModelNextClass(this.materia,this.lugar,this.edificio,this.piso,this.salon,this.fecha,{super.key});
+//Cards.add(const ModelNextClass("Algebra","Salon de clases","Ema 5", 0, "3D", '2024-03-25 18:00:00Z'));
+final String materia;
+final String lugar;
+final String edificio;
+final String piso;
+final String salon;
+final String fecha;
   @override
-  
   Widget build(BuildContext context) {
-    return Card(
+       return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(40), // if you need this
         side: BorderSide(
@@ -22,15 +23,15 @@ class ModelAsesorias extends Card{
       ),
       color: Constants.Lightray,
       child: ListTile(
-        leading: Text("$totalAlumnos/$capacidad"),
+        //leading: Text("$totalAlumnos/$capacidad"),
         title: Text(materia),
-        subtitle: Text(lugar),
+        subtitle: Text("Edificio:${edificio} piso:${piso} salon:$salon"),
         trailing: BuildTime()
       )
     );
   }
   BuildTime() {
-    DateTime date = DateTime.parse(time);
+    DateTime date = DateTime.parse(fecha);
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
@@ -41,4 +42,5 @@ class ModelAsesorias extends Card{
     );
   }
 }
+
 

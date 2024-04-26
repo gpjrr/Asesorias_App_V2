@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 
-import '../Common/Components/ModelEmail.dart';
-import '../Common/Components/TextBar.dart';
-import '../Common/Pages/Constants.dart';
+import '../../../Profesor/Models/ModelNextClass.dart';
+import '../../../Common/Components/TextBar.dart';
+import '../../../Common/Pages/Constants.dart';
 
-class EmailList extends StatefulWidget {
-  const EmailList({super.key});
+class NextClass extends StatefulWidget {
+  const NextClass({super.key});
 
   @override
-  State<EmailList> createState() => _EmailListState();
+  State<NextClass> createState() => _NextClassState();
 }
 
-class _EmailListState extends State<EmailList> {
+class _NextClassState extends State<NextClass> {
   List<Card> Cards = [];
   @override
   void initState() {
-    Cards.add(const ModelEmail("Algebra", "Erwin Romero Ramos", 201762426));
-    Cards.add(const ModelEmail(
-        "Matematicas Aplicadas", "Judith Gonzalez", 201831425));
-    Cards.add(const ModelEmail("Algebra", "Erwin Romero Ramos", 201635468));
+    // TODO: implement initState
+    Cards.add(const ModelNextClass("Algebra","Salon de clases","Ema 5", "0", "3D", '2024-03-25 18:00:00Z') );
+    Cards.add(const ModelNextClass("Programacion","cubiculo", "CC03", "3", "135", '2024-03-26 14:30:00Z') );
+    super.initState();
   }
 
   @override
@@ -26,7 +26,7 @@ class _EmailListState extends State<EmailList> {
     return Scaffold(
         appBar: AppBar(
           /// TODO: insert button to create a new place
-          title: TextBar("Lista de solicitudes"),
+          title: TextBar("Asesorias por asistir"),
           backgroundColor: Constants.azulClaro,
           actions: <Widget>[
             IconButton(
@@ -42,7 +42,7 @@ class _EmailListState extends State<EmailList> {
         ),
         body: Center(
             child: ListView.builder(
-          itemCount: 3,
+          itemCount: 2,
           itemBuilder: (context, index) {
             return Cards[index];
           },

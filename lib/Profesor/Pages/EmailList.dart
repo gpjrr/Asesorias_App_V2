@@ -1,27 +1,24 @@
-import 'package:asesorias_app_v2/Common/Components/TextBar.dart';
-import 'package:asesorias_app_v2/Common/Pages/Constants.dart';
 import 'package:flutter/material.dart';
-import '../Common/Components/ModelSalon.dart';
 
-class PlacesList extends StatefulWidget {
-  const PlacesList({super.key});
+import '../Models/ModelEmail.dart';
+import '../../Common/Components/TextBar.dart';
+import '../../Common/Pages/Constants.dart';
+
+class EmailList extends StatefulWidget {
+  const EmailList({super.key});
 
   @override
-  State<PlacesList> createState() => _PlacesListState();
+  State<EmailList> createState() => _EmailListState();
 }
 
-class _PlacesListState extends State<PlacesList> {
+class _EmailListState extends State<EmailList> {
   List<Card> Cards = [];
   @override
   void initState() {
-    // TODO: implement initState
-    int size = 0;
-    super.initState();
-
-    /// nombre, edificio, piso, salon;
-    Cards.add(const ModelSalon("Salon", "Ema 5", 0, "3D", 1));
-    Cards.add(const ModelSalon("cubiculo", "CC03", 0, "135", 2));
-    Cards.add(const ModelSalon("Salon Matematicas", "CC02", 1, "110", 3));
+    Cards.add(const ModelEmail("Algebra", "Erwin Romero Ramos", 201762426));
+    Cards.add(const ModelEmail(
+        "Matematicas Aplicadas", "Judith Gonzalez", 201831425));
+    Cards.add(const ModelEmail("Algebra", "Erwin Romero Ramos", 201635468));
   }
 
   @override
@@ -29,7 +26,7 @@ class _PlacesListState extends State<PlacesList> {
     return Scaffold(
         appBar: AppBar(
           /// TODO: insert button to create a new place
-          title: const TextBar("Area de Trabajo"),
+          title: TextBar("Lista de solicitudes"),
           backgroundColor: Constants.azulClaro,
           actions: <Widget>[
             IconButton(

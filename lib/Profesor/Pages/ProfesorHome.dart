@@ -1,8 +1,8 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:asesorias_app_v2/Common/Pages/Profile.dart';
-import 'package:asesorias_app_v2/Profesor/ClassList.dart';
-import 'package:asesorias_app_v2/Profesor/EmailList.dart';
-import 'package:asesorias_app_v2/Profesor/PlacesList.dart';
+import 'package:asesorias_app_v2/Profesor/Pages/ClassList.dart';
+import 'package:asesorias_app_v2/Profesor/Pages/EmailList.dart';
+import 'package:asesorias_app_v2/Profesor/Pages/PlacesList.dart';
 import 'package:flutter/material.dart';
 
 class ProfesorHome extends StatefulWidget {

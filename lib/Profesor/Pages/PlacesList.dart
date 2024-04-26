@@ -1,24 +1,27 @@
+import 'package:asesorias_app_v2/Common/Components/TextBar.dart';
+import 'package:asesorias_app_v2/Common/Pages/Constants.dart';
 import 'package:flutter/material.dart';
+import '../Models/ModelSalon.dart';
 
-import '../Common/Components/ModelNextClass.dart';
-import '../Common/Components/TextBar.dart';
-import '../Common/Pages/Constants.dart';
-
-class NextClass extends StatefulWidget {
-  const NextClass({super.key});
+class PlacesList extends StatefulWidget {
+  const PlacesList({super.key});
 
   @override
-  State<NextClass> createState() => _NextClassState();
+  State<PlacesList> createState() => _PlacesListState();
 }
 
-class _NextClassState extends State<NextClass> {
+class _PlacesListState extends State<PlacesList> {
   List<Card> Cards = [];
   @override
   void initState() {
     // TODO: implement initState
-    Cards.add(const ModelNextClass("Algebra","Salon de clases","Ema 5", "0", "3D", '2024-03-25 18:00:00Z') );
-    Cards.add(const ModelNextClass("Programacion","cubiculo", "CC03", "3", "135", '2024-03-26 14:30:00Z') );
+    int size = 0;
     super.initState();
+
+    /// nombre, edificio, piso, salon;
+    Cards.add(const ModelSalon("Salon", "Ema 5", 0, "3D", 1));
+    Cards.add(const ModelSalon("cubiculo", "CC03", 0, "135", 2));
+    Cards.add(const ModelSalon("Salon Matematicas", "CC02", 1, "110", 3));
   }
 
   @override
@@ -26,7 +29,7 @@ class _NextClassState extends State<NextClass> {
     return Scaffold(
         appBar: AppBar(
           /// TODO: insert button to create a new place
-          title: TextBar("Asesorias por asistir"),
+          title: const TextBar("Area de Trabajo"),
           backgroundColor: Constants.azulClaro,
           actions: <Widget>[
             IconButton(
@@ -42,7 +45,7 @@ class _NextClassState extends State<NextClass> {
         ),
         body: Center(
             child: ListView.builder(
-          itemCount: 2,
+          itemCount: 3,
           itemBuilder: (context, index) {
             return Cards[index];
           },

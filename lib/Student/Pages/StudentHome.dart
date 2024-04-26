@@ -1,7 +1,7 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
-import '../Common/Pages/Profile.dart';
+import '../../../Common/Pages/Profile.dart';
 import 'NextClass.dart';
 
 class StudentHome extends StatefulWidget {

@@ -1,15 +1,15 @@
 import 'package:asesorias_app_v2/Login/NewAccount.dart';
 import 'package:asesorias_app_v2/Common/Pages/Constants.dart';
-import 'package:asesorias_app_v2/Profesor/NewClass.dart';
-import 'package:asesorias_app_v2/Profesor/ProfesorHome.dart';
+import 'package:asesorias_app_v2/Profesor/Pages/NewClass.dart';
+import 'package:asesorias_app_v2/Profesor/Pages/ProfesorHome.dart';
 import 'package:asesorias_app_v2/Common/Pages/Loading.dart';
-import 'package:asesorias_app_v2/Student/StudentHome.dart';
+import 'package:asesorias_app_v2/Student/Pages/StudentHome.dart';
 
 ///todo: check lopading
 import 'package:flutter/material.dart';
 import 'package:asesorias_app_v2/Login/Login.dart';
 
-import 'Student/NewAsesoria.dart';
+import 'Student/Pages/NewAsesoria.dart';
 
 const Color primaryColor = Color.fromARGB(255, 13, 170, 228);
 void main() => runApp(MaterialApp(
